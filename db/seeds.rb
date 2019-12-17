@@ -10,7 +10,5 @@
 	user = User.create(name: Faker::Name.name, email: Faker::Internet.email)
 	5.times do
 		user.post.create(title: Faker::Lorem.sentence(world_count:3), body: Faker::Lorem::paragraph(sentence_count:3))
-	end
-
-	
+	end	
 end

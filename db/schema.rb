@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_191444) do
+ActiveRecord::Schema.define(version: 2019_12_17_162146) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
@@ -21,11 +21,13 @@ ActiveRecord::Schema.define(version: 2019_12_16_191444) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "u_sers", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreing_key "posts", "users"
 
 end

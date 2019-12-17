@@ -1,2 +1,0 @@
-class USer < ApplicationRecord
-end
